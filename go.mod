@@ -1,4 +1,4 @@
-module github.com/rook/rook
+module github.com/aerosouund/rook
 
 go 1.21
 
