@@ -7,7 +7,7 @@ replace (
 	github.com/kubernetes-incubator/external-storage => github.com/libopenstorage/external-storage v0.20.4-openstorage-rc3
 
 	// TODO: remove this replace once https://github.com/libopenstorage/secrets/pull/83 is merged
-	github.com/libopenstorage/secrets => github.com/rook/secrets v0.0.0-20240315053144-3195f6906937
+	github.com/aerosouund/secrets => github.com/rook/secrets v0.0.0-20240315053144-3195f6906937
 	github.com/portworx/sched-ops => github.com/portworx/sched-ops v0.20.4-openstorage-rc3
 	github.com/aerosouund/rook/pkg/apis => ./pkg/apis
 )
@@ -16,7 +16,7 @@ require (
 	github.com/hashicorp/vault/api v1.13.0
 	github.com/k8snetworkplumbingwg/network-attachment-definition-client v1.7.0
 	github.com/kube-object-storage/lib-bucket-provisioner v0.0.0-20221122204822-d1a8c34382f1
-	github.com/libopenstorage/secrets v0.0.0-20231011182615-5f4b25ceede1
+	github.com/aerosouund/secrets v0.0.0-20231011182615-5f4b25ceede1
 	github.com/pkg/errors v0.9.1
 	github.com/stretchr/testify v1.9.0
 	k8s.io/api v0.29.3
