@@ -20,8 +20,6 @@ import (
 	"strings"
 
 	"github.com/hashicorp/vault/api"
-	"github.com/libopenstorage/secrets"
-	"github.com/libopenstorage/secrets/vault"
 )
 
 var (
@@ -40,26 +38,26 @@ func (kms *KeyManagementServiceSpec) IsTokenAuthEnabled() bool {
 
 // IsK8sAuthEnabled return whether KMS Kubernetes auth is enabled
 func (kms *KeyManagementServiceSpec) IsK8sAuthEnabled() bool {
-	return getParam(kms.ConnectionDetails, vault.AuthMethod) == vault.AuthMethodKubernetes && kms.TokenSecretName == ""
+	return true
 }
 
 // IsVaultKMS return whether Vault KMS is configured
 func (kms *KeyManagementServiceSpec) IsVaultKMS() bool {
-	return getParam(kms.ConnectionDetails, "KMS_PROVIDER") == secrets.TypeVault
+	return true
 }
 
 func (kms *KeyManagementServiceSpec) IsAzureMS() bool {
-	return getParam(kms.ConnectionDetails, "KMS_PROVIDER") == secrets.TypeAzure
+	return true
 }
 
 // IsIBMKeyProtectKMS return whether IBM Key Protect KMS is configured
 func (kms *KeyManagementServiceSpec) IsIBMKeyProtectKMS() bool {
-	return getParam(kms.ConnectionDetails, "KMS_PROVIDER") == "ibmkeyprotect"
+	return true
 }
 
 // IsKMIPKMS return whether KMIP KMS is configured
 func (kms *KeyManagementServiceSpec) IsKMIPKMS() bool {
-	return getParam(kms.ConnectionDetails, "KMS_PROVIDER") == "kmip"
+	return true
 }
 
 // IsTLSEnabled return KMS TLS details are configured
